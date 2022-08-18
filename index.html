@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="title" content="Johan Tandukar">
+		<meta name="description" content="I am full stack web developer. I am also a freelancer where i develop web application, mobile development, digital marketing, content wrting and project manager.">
+		<title>Johan Tandukar</title>
+
+		<link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+
+		<!-- CSS ====================================== -->
+		<link rel="stylesheet" href="assets/css/styles.css" />
+
+		<!-- BOXICONS ================================ -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
+
+		<!--======================= Simple Line Icons  =========================----->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+
+		<!-- GSAP ======================================= -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+		<!-- THREEJS ================================================= -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+		<!-- SWIPER CSS ====================================================== -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+		<!-- SWIPER JS ========================================================== -->
+		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+		<!-- SCROLL REVEAL ANIMATION ========================================= -->
+		<script src="https://unpkg.com/scrollreveal"></script>
+	</head>
+	<body>
+		<!-- HEADER SECTION =================================================== -->
+		<div class="overlay"></div>
+		<header class="header" id="header">
+			<nav class="nav container">
+				<a href="#home" class="logo">
+					<svg width="109" height="39" viewBox="0 0 109 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0.74 12.5C0.953333 12.66 1.28 12.82 1.72 12.98C2.16 13.1267 2.68 13.2 3.28 13.2C3.86667 13.2 4.34 13.1067 4.7 12.92C5.07333 12.72 5.35333 12.4267 5.54 12.04C5.74 11.64 5.87333 11.1333 5.94 10.52C6.02 9.90667 6.06 9.18 6.06 8.34V0.799999H8.32V8.02C8.32 9.07333 8.26 10.04 8.14 10.92C8.03333 11.8 7.81333 12.5667 7.48 13.22C7.14667 13.86 6.64667 14.3533 5.98 14.7C5.32667 15.0467 4.44667 15.22 3.34 15.22C2.68667 15.22 2.10667 15.1467 1.6 15C1.09333 14.8533 0.626667 14.6333 0.2 14.34L0.74 12.5ZM17.2656 15.1C16.239 15.1 15.3123 14.9 14.4856 14.5C13.659 14.1 12.9456 13.56 12.3456 12.88C11.7456 12.1867 11.279 11.4133 10.9456 10.56C10.6256 9.69333 10.4656 8.80667 10.4656 7.9C10.4656 6.95333 10.639 6.05333 10.9856 5.2C11.3323 4.33333 11.8123 3.56667 12.4256 2.9C13.039 2.22 13.759 1.68667 14.5856 1.3C15.4256 0.899999 16.3323 0.699999 17.3056 0.699999C18.319 0.699999 19.239 0.906666 20.0656 1.32C20.9056 1.73333 21.619 2.28667 22.2056 2.98C22.8056 3.67333 23.2656 4.44667 23.5856 5.3C23.919 6.15333 24.0856 7.02667 24.0856 7.92C24.0856 8.86667 23.9123 9.77333 23.5656 10.64C23.2323 11.4933 22.759 12.26 22.1456 12.94C21.5323 13.6067 20.8056 14.1333 19.9656 14.52C19.139 14.9067 18.239 15.1 17.2656 15.1ZM12.7456 7.9C12.7456 8.56667 12.8523 9.21333 13.0656 9.84C13.279 10.4667 13.579 11.0267 13.9656 11.52C14.3656 12 14.8456 12.38 15.4056 12.66C15.9656 12.94 16.5923 13.08 17.2856 13.08C18.0056 13.08 18.6456 12.9333 19.2056 12.64C19.7656 12.3467 20.2323 11.9533 20.6056 11.46C20.9923 10.9533 21.2856 10.3933 21.4856 9.78C21.6856 9.15333 21.7856 8.52667 21.7856 7.9C21.7856 7.23333 21.679 6.59333 21.4656 5.98C21.2656 5.35333 20.9656 4.8 20.5656 4.32C20.1656 3.82667 19.6856 3.44 19.1256 3.16C18.579 2.88 17.9656 2.74 17.2856 2.74C16.5656 2.74 15.9256 2.88667 15.3656 3.18C14.8056 3.47333 14.3323 3.86667 13.9456 4.36C13.559 4.85333 13.259 5.40667 13.0456 6.02C12.8456 6.63333 12.7456 7.26 12.7456 7.9ZM38.0647 0.799999V15H35.8047V8.74H28.6447V15H26.4047V0.799999H28.6447V6.74H35.8047V0.799999H38.0647ZM45.368 0.799999H47.488L53.008 15H50.648L49.148 11.14H43.668L42.188 15H39.808L45.368 0.799999ZM48.708 9.48L46.428 3.26L44.068 9.48H48.708ZM57.0041 4.96V15H54.7641V0.799999H56.6041L64.6441 11.06V0.819999H66.9041V15H64.9441L57.0041 4.96ZM12.02 25.78H7.3V38H5.04V25.78H0.3V23.8H12.02V25.78ZM16.6961 23.8H18.8161L24.3361 38H21.9761L20.4761 34.14H14.9961L13.5161 38H11.1361L16.6961 23.8ZM20.0361 32.48L17.7561 26.26L15.3961 32.48H20.0361ZM28.3322 27.96V38H26.0922V23.8H27.9322L35.9722 34.06V23.82H38.2322V38H36.2722L28.3322 27.96ZM41.4242 38V23.8H46.4642C47.9976 23.8 49.2776 24.12 50.3042 24.76C51.3309 25.3867 52.0976 26.24 52.6042 27.32C53.1242 28.3867 53.3842 29.5733 53.3842 30.88C53.3842 32.32 53.0976 33.5733 52.5242 34.64C51.9642 35.7067 51.1642 36.5333 50.1242 37.12C49.0842 37.7067 47.8642 38 46.4642 38H41.4242ZM51.1042 30.88C51.1042 29.88 50.9176 29 50.5442 28.24C50.1842 27.4667 49.6576 26.8667 48.9642 26.44C48.2842 26 47.4509 25.78 46.4642 25.78H43.6642V36.02H46.4642C47.4642 36.02 48.3042 35.7933 48.9842 35.34C49.6776 34.8867 50.2042 34.2733 50.5642 33.5C50.9242 32.7267 51.1042 31.8533 51.1042 30.88ZM61.6606 38.1C60.5273 38.1 59.5673 37.9067 58.7806 37.52C58.0073 37.1333 57.3806 36.6067 56.9006 35.94C56.434 35.2733 56.0873 34.5133 55.8606 33.66C55.6473 32.8067 55.5406 31.92 55.5406 31V23.8H57.7806V31C57.7806 31.6533 57.8473 32.2867 57.9806 32.9C58.114 33.5 58.3273 34.04 58.6206 34.52C58.914 35 59.3073 35.38 59.8006 35.66C60.3073 35.94 60.9273 36.08 61.6606 36.08C62.4073 36.08 63.0273 35.94 63.5206 35.66C64.0273 35.3667 64.4206 34.98 64.7006 34.5C64.994 34.0067 65.2073 33.46 65.3406 32.86C65.474 32.26 65.5406 31.64 65.5406 31V23.8H67.8006V31C67.8006 31.9733 67.6806 32.8933 67.4406 33.76C67.214 34.6133 66.854 35.3667 66.3606 36.02C65.8806 36.66 65.254 37.1667 64.4806 37.54C63.7073 37.9133 62.7673 38.1 61.6606 38.1ZM70.7797 38V23.82H73.0197V31.12L79.6997 23.8H82.1797L76.5797 30.08L82.4997 38H79.9597L75.1597 31.5L73.0197 33.72V38H70.7797ZM88.0828 23.8H90.2028L95.7228 38H93.3628L91.8628 34.14H86.3828L84.9028 38H82.5228L88.0828 23.8ZM91.4228 32.48L89.1428 26.26L86.7828 32.48H91.4228ZM97.4789 38V23.8H103.659C104.299 23.8 104.886 23.9333 105.419 24.2C105.952 24.4667 106.412 24.82 106.799 25.26C107.199 25.7 107.506 26.1933 107.719 26.74C107.946 27.2867 108.059 27.8467 108.059 28.42C108.059 29.0467 107.946 29.6467 107.719 30.22C107.492 30.7933 107.166 31.2867 106.739 31.7C106.326 32.1133 105.839 32.4133 105.279 32.6L108.619 38H106.099L103.019 33.06H99.7189V38H97.4789ZM99.7189 31.08H103.639C104.052 31.08 104.419 30.96 104.739 30.72C105.059 30.48 105.312 30.16 105.499 29.76C105.686 29.3467 105.779 28.9 105.779 28.42C105.779 27.9267 105.672 27.4867 105.459 27.1C105.246 26.7 104.966 26.38 104.619 26.14C104.286 25.9 103.919 25.78 103.519 25.78H99.7189V31.08Z" fill="black" class="logo-name"/>
+					</svg>
+						
+				</a>
+
+				<div class="nav-menu" id="nav-menu">
+					<ul class="nav-list">
+						<li class="nav-item">
+							<a href="#home" class="nav-link">
+								<span class="nav-link1">Home</span>
+								<span class="nav-link2">Home</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#about" class="nav-link">
+								<span class="nav-link1">About Me</span>
+								<span class="nav-link2">About Me</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#resume" class="nav-link">
+								<span class="nav-link1">Experience</span>
+								<span class="nav-link2">Experience</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#project" class="nav-link">
+								<span class="nav-link1">Work</span>
+								<span class="nav-link2">Work</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#testimonial" class="nav-link">
+								<span class="nav-link1">Testimonial</span>
+								<span class="nav-link2">Testimonial</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#footer" class="nav-link">
+								<span class="nav-link1">Contact</span>
+								<span class="nav-link2">Contact</span>
+							</a>
+						</li>
+					</ul>
+
+					<ul class="social-links">
+						<li class="social-link">
+							<a href="https://www.facebook.com/123john456/" target="_blank">
+								<span>Facebook</span>
+								<i class="bx bxl-facebook"></i>
+							</a>
+						</li>
+						<li class="social-link">
+							<a href="https://www.linkedin.com/in/johan-tandukar-133520191/" target="_blank">
+								<span>Linkedin</span>
+								<i class="bx bxl-linkedin"></i>
+							</a>
+						</li>
+						<li class="social-link">
+							<a href="https://www.instagram.com/jo_han_tandukar/" target="_blank">
+								<span>Instagram</span>
+								<i class="bx bxl-instagram"></i>
+							</a>
+						</li>
+					</ul>
+
+					<div class="email">
+						<a href="mailto:johantandukar10@gmail.com">
+							johantandukar10@gmail.com
+						</a>
+					</div>s
+
+					<div class="nav-close" id="nav-close"></div>
+				</div>
+
+				<div class="toggle-wrap">
+					<div class="theme-container">
+						<div class="theme-switch-wrapper">
+							<span>Switch Theme</span>
+							<label for="checkbox" class="theme-switch">
+								<input type="checkbox" id="checkbox" />
+								<div class="slider round"></div>
+							</label>
+						</div>
+					</div>
+
+					<div class="nav-open" id="nav-open"></div>
+				</div>
+			</nav>
+		</header>
+
+		<main class="main">
+			<!-- HOME SECTION ====================================== -->
+			<section class="section home" id="home">
+				<div class="container home-container">
+					<div class="home-data">
+						<h1 class="home-title">HI THERE, I’M A Full Stack Web Developer.</h1>
+						<p class="home-description">
+							Johan Tandukar is a Full Stack Web Developer. I have been gaining skills and experience in Web Design & Development, Business Analytics, SEO, Content Writing, and Digital Marketing.
+						</p>
+
+						<div class="home-buttons">
+								<a href="#footer" class="btn">
+									Contact Me
+								</a>
+							<a href="#about" class="btn-b" >More About Me</a>
+
+						</div>
+					</div>
+
+					<div class="home-image">
+						<div class="home-img">
+							<img src="assets/images/hero.jpg" alt="johantandukar" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ABOUT ME -->
+
+			<section class="about container section" id="about">
+				<h2 class="section-title ig-title">About Me</h2>
+
+
+
+					<div class="about-container grid">
+						<img src="assets/images/hero-2.jpg" alt="johantandukar" class="about_img">
+
+						<div class="about_data grid">
+							<div class="about_info">
+								<p class="about_description">
+									I am Johan Tandukar. A full-stack web developer from Kathmandu, Nepal. I have experience in website design and development of Web Applications mostly using the Django and flask framework, python programming language, MySQL and Postgres database, and Html, CSS, JS, and Bootstrap. You can see the deployment project on this website and the college project and self-project in the Curriculum vitae (CV) which you can download below : 
+								</p>
+								<a href="assets/cv/Johan_Tandukar_CV.pdf" class="btn btn-cv" download>Download CV</a>
+							</div>
+							<div class="about_skills grid">
+								<h2 class="skills_name">Skills :</h2>
+
+								<div class="skills_data">
+									<div class="skills_titles">
+										<h3 class="skills_name">Python</h3>
+										<span class="skills_number">92%</span>
+									</div>
+
+									<div class="skills_bar">
+										<span class="skills_percentage python"></span>
+									</div>
+								</div>
+
+								<div class="skills_data">
+									<div class="skills_titles">
+										<h3 class="skills_name">Django</h3>
+										<span class="skills_number">90%</span>
+									</div>
+
+									<div class="skills_bar">
+										<span class="skills_percentage overall"></span>
+									</div>
+								</div>
+								<div class="skills_data">
+									<div class="skills_titles">
+										<h3 class="skills_name">HTML, CSS, JS, Bootstrap</h3>
+										<span class="skills_number">90%</span>
+									</div>
+
+									<div class="skills_bar">
+										<span class="skills_percentage overall"></span>
+									</div>
+								</div>
+								<div class="skills_data">
+									<div class="skills_titles">
+										<h3 class="skills_name">Database Design</h3>
+										<span class="skills_number">90%</span>
+									</div>
+
+									<div class="skills_bar">
+										<span class="skills_percentage overall"></span>
+									</div>
+								</div>
+
+								<div class="skills_data">
+									<div class="skills_titles">
+										<h3 class="skills_name">UI/UX Design</h3>
+										<span class="skills_number">86%</span>
+									</div>
+
+									<div class="skills_bar">
+										<span class="skills_percentage flaskui"></span>
+									</div>
+								</div>
+
+								<div class="skills_data">
+									<div class="skills_titles">
+										<h3 class="skills_name">Flask</h3>
+										<span class="skills_number">86%</span>
+									</div>
+
+									<div class="skills_bar">
+										<span class="skills_percentage flaskui"></span>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<!-- RESUME & DEGREES -->
+
+			<section class="resume container section" id="resume">
+				<h2 class="section-title experience">Experience</h2>
+
+				<div class="resume_container grid">
+					<div class="timeline grid">
+						<h1>Education</h1>
+
+						<div class="timeline_item">
+							<i class="icon-graduation"></i>
+							<span class="timeline_data">2019 - 2021</span>
+							<h3 class="timeline_title">Bachelor of Information Technology</h3>
+							<p class="timeline_text">
+								I have completed my bachelor's degree from Islington College which is located at Kamalpokhari, Kathmandu. I have completed my degree with First Class Honors.
+							</p>
+						</div>
+
+						<div class="timeline_item">
+							<i class="icon-graduation"></i>
+							<span class="timeline_data">2016 - 2018</span>
+							<h3 class="timeline_title">Intermediate Level (10+2) NEB</h3>
+							<p class="timeline_text">
+								I have completed my intermediate-level degree from Kathmandu Model College which is located in Bagbazar, Kathmandu. I have completed my degree with a Grade of B+.
+							</p>
+						</div>
+
+						<div class="timeline_item">
+							<i class="icon-graduation"></i>
+							<span class="timeline_data">2010 - 2015</span>
+							<h3 class="timeline_title">High School (SLC)</h3>
+							<p class="timeline_text">
+								I have completed my High school degree from Nightingale Higher Secondary School which is located at Kupondol, Lalitpur. I have completed my degree with Grade A.
+							</p>
+						</div>
+
+					</div>
+
+					<div class="timeline grid">
+						<h1>Work</h1>
+						<div class="timeline_item">
+							<i class="icon-briefcase"></i>
+							<span class="timeline_data">July 2021 - Aug 2022 (1 year)</span>
+							<h3 class="timeline_title">Full Stack Web Development at IT Concerns</h3>
+							<p class="timeline_text">
+								I was a Full Stack Web Development at NexLogiQ for 1 year where I completed multiple projects with the help of a very friendly and good colleague. I had a great experience working in this company. I got an opportunity to learn new things every day.
+							</p>
+						</div>
+
+						<div class="timeline_item">
+							<i class="icon-briefcase"></i>
+							<span class="timeline_data"> Dec 2020 - Jun 2021 (6 months)</span>
+							<h3 class="timeline_title">Full Stack Web Development at NexLogiQ</h3>
+							<p class="timeline_text">
+								I was a Full Stack Web Development at NexLogiQ for 6 months where I had got my first working experience related to a real-life project in the Django framework.
+							</p>
+						</div>
+
+						<div class="timeline_item">
+							<i class="icon-briefcase"></i>
+							<span class="timeline_data"> Sep 2020 - Dec 2020 (4 months)</span>
+							<h3 class="timeline_title">Backend Internship at Karnali Nework Services</h3>
+							<p class="timeline_text">
+								I was a backend intern at Karnali Network Services for 4 months where I got the opportunity to learn the python programming language and its use in real life.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+
+
+			<!-- PROJECT SECTION ========================================= -->
+			<section class="section project" id="project">
+				<div class="container project-container">
+					<h2 class="section-title">My featured<br />projects</h2>
+					<div class="project-wrap">
+						<!-- Project 1===== -->
+						<div class="project-list p-1">
+							<div class="project-content-wrap">
+								<div class="project-media">
+									<a href="#">
+										<div class="project-img">
+											<div class="project-thumbnail project-thumbnail1">
+												<img src="assets/images/p1.png" alt="Four Box Nepal">
+											</div>
+										</div>
+									</a>
+								</div>
+
+								<div class="project-content">
+									<h3>Four Box Nepal</h3>
+									<p>
+										Four Box Nepal is an e-commerce application which was developed for vendors and customers to reduce the extra charges with good offers. My role was to develop the backend with my colleague.
+									</p>
+									<div class="project-btn-container">
+										<a href="https://fourboxnepal.com/category/health-beauty" class="project-link" target="_blank">
+											<span class="project-link1">View Project</span>
+											<span class="project-link2">Behance Case Study</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Project 2===== -->
+						<div class="project-list p-2">
+							<div class="project-content-wrap">
+								<div class="project-media">
+									<a href="#">
+										<div class="project-img">
+											<div class="project-thumbnail project-thumbnail2">
+												<img src="assets/images/p2.png" alt="Karnali Sports Club">
+											</div>
+										</div>
+									</a>
+								</div>
+
+								<div class="project-content">
+									<h3>Karnali Sports Club</h3>
+									<p>
+										Karnali Sports Club is to promote to development of Jumla as a High Altitude training center while at the same time working for the betterment of the community, and children through sports. My role was to develop the application with my colleague using the Django framework.
+									</p>
+									<div class="project-btn-container">
+										<a href="https://karnalisports.com/" class="project-link" target="_blank">
+											<span class="project-link1">View Project</span>
+											<span class="project-link2">Behance Case Study</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Project 3===== -->
+						<div class="project-list p-3">
+							<div class="project-content-wrap">
+								<div class="project-media">
+									<a href="#">
+										<div class="project-img">
+											<div class="project-thumbnail project-thumbnail3">
+												<img src="assets/images/p3.png" alt="Nikantha Multiple Campus">
+											</div>
+										</div>
+									</a>
+								</div>
+
+								<div class="project-content">
+									<h3>Nikantha Multiple Campus</h3>
+									<p>
+										Nikantha Multiple Campus is the application which develops in order to update the application of the college of Nepal. The technology and education system were lacking in the context of Nepal so the application was developed to encounter the problem. My role was junior full stack web developer with my colleague of NexLogiQ.
+									</p>
+									<div class="project-btn-container">
+										<a href="https://nilkanthacampus.edu.np/" class="project-link" target="_blank">
+											<span class="project-link1">View Project</span>
+											<span class="project-link2">Behance Case Study</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Project 4===== -->
+						<div class="project-list p-4">
+							<div class="project-content-wrap">
+								<div class="project-media">
+									<a href="#">
+										<div class="project-img">
+											<div class="project-thumbnail project-thumbnail4">
+												<img src="assets/images/p4.png" alt="Sarathi Consults & Business Development">
+											</div>
+										</div>
+									</a>
+								</div>
+
+								<div class="project-content">
+									<h3>Sarathi Consults & Business Development</h3>
+									<p>
+										Sarathi Consults & Business Development is the portfolio website of the sarathi consults and business development to promote their business through technology. I got this project while freelancing and my role was as a full-stack web developer.
+									</p>
+									<div class="project-btn-container">
+										<a href="https://sarathiconsults.com/" class="project-link" target="_blank">
+											<span class="project-link1">View Project</span>
+											<span class="project-link2">Behance Case Study</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Project 5===== -->
+						<div class="project-list p-5">
+							<div class="project-content-wrap">
+								<div class="project-media">
+									<a href="#">
+										<div class="project-img">
+											<div class="project-thumbnail project-thumbnail4">
+												<img src="assets/images/p5.png" alt="IT Concerns">
+											</div>
+										</div>
+									</a>
+								</div>
+
+								<div class="project-content">
+									<h3>IT Concerns</h3>
+									<p>
+										IT Concerns is the portfolio website of IT Concerns to promote their facility and services. My role was full stack web developer with my colleague in their company.
+									</p>
+									<div class="project-btn-container">
+										<a href="https://www.itconcerns.com.np/" class="project-link" target="_blank">
+											<span class="project-link1">View Project</span>
+											<span class="project-link2">Behance Case Study</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Project 6===== -->
+						<div class="project-list p-6">
+							<div class="project-content-wrap">
+								<div class="project-media">
+									<a href="#">
+										<div class="project-img">
+											<div class="project-thumbnail project-thumbnail4">
+												<img src="assets/images/p6.png" alt="Whoopeelandpark">
+											</div>
+										</div>
+									</a>
+								</div>
+
+								<div class="project-content">
+									<h3>Whoopeelandpark</h3>
+									<p>
+										Whoopee land park is the portfolio website of their website development to promote their business and services. My role was full stack web developer with my colleague of IT Concerns.
+									</p>
+									<div class="project-btn-container">
+										<a href="https://whoopeelandpark.com/" class="project-link" target="_blank">
+											<span class="project-link1">View Project</span>
+											<span class="project-link2">Behance Case Study</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Project 7===== -->
+						<div class="project-list p-7">
+							<div class="project-content-wrap">
+								<div class="project-media">
+									<a href="#">
+										<div class="project-img">
+											<div class="project-thumbnail project-thumbnail4">
+												<img src="assets/images/p7.png" alt="Development Excahnge Center Nepal">
+											</div>
+										</div>
+									</a>
+								</div>
+
+								<div class="project-content">
+									<h3>Development Excahnge Center Nepal</h3>
+									<p>
+										Development Exchange Center Nepal is the portfolio website of their website development in order to promote their website. My role was full stack web developer with my colleague of IT Concerns.
+									</p>
+									<div class="project-btn-container">
+										<a href="https://www.decnepal.org.np/" class="project-link" target="_blank">
+											<span class="project-link1">View Project</span>
+											<span class="project-link2">Behance Case Study</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Project 8===== -->
+						<div class="project-list p-8">
+							<div class="project-content-wrap">
+								<div class="project-media">
+									<a href="#">
+										<div class="project-img">
+											<div class="project-thumbnail project-thumbnail4">
+												<img src="assets/images/p8.png" alt="South Asian Partnership Nepal">
+											</div>
+										</div>
+									</a>
+								</div>
+
+								<div class="project-content">
+									<h3>South Asian Partnership Nepal</h3>
+									<p>
+										South Asian Partnership Nepal is the portfolio website of their website development in order to promote their website. My role was full stack web developer with my colleague of IT Concerns.
+									</p>
+									<div class="project-btn-container">
+										<a href="https://sapnepal.org.np/" class="project-link" target="_blank">
+											<span class="project-link1">View Project</span>
+											<span class="project-link2">Behance Case Study</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- TESTIMONIAL SECTION ======================================= -->
+			<section class="section testimonial" id="testimonial">
+				<div class="container testimonial-container">
+					<div class="testimonial-bg swiper">
+						<div class="testimonial-data">
+							<h2 class="section-title">Testimonial</h2>
+							<div class="pagination">
+								<div class="prev swiper-button-prev"></div>
+								<div class="next swiper-button-next"></div>
+							</div>
+						</div>
+
+						<div class="testimonial-details swiper-wrapper">
+							<!-- Testimonial-1 ==== -->
+							<figure class="swiper-slide">
+								<div class="quote">
+									"From the start of the project, through to completion, Johan supported us 
+									and exceeded our expectations in every way.
+									Not only was our experience personal and friendly, his ability to 
+									identify and present our key messages in an imaginative
+									and creative way gave us a huge amount of confidence in him. In many ways Johan understood 
+									our client's website needs better than we did and he complimented our vision perfectly. He's reliable, professional 
+									and easy to work with. I can’t recommend him highly enough and we look forward to continuing our 
+									working relationship together."
+								</div>
+
+								<div class="person">
+									<div class="profile-pic">
+										<img src="assets/images/testimonial-1.jpg" alt="Basant Shrestha" />
+									</div>
+
+									<div class="person-details">
+										<span class="name">Basant Shrestha</span>
+										<span class="post">Founder & Managing Director at IT Concerns</span>
+									</div>
+								</div>
+							</figure>
+
+							<!-- Testimonial-2 ==== -->
+							<figure class="swiper-slide">
+								<div class="quote">
+									"Our company's new website is just what I intended to make it. So,  I've referred to my different clients about Johan. What I admired about him was how they made a plan and carried it through. Before beginning the build process, they took the time to understand my business, which saved my effort because I didn't have to make modifications all the time. Likewise, they were incredibly easy to interact with and worked well with ideas rather than forcing me to develop the website myself."
+								</div>
+
+								<div class="person">
+									<div class="profile-pic">
+										<img src="assets/images/testimonial-2.jpg" alt="MIlan Khatiwoda" />
+									</div>
+
+									<div class="person-details">
+										<span class="name">MIlan Khatiwoda</span>
+										<span class="post">CEO & Business Consultant at Sarathi Consults & Business Development</span>
+									</div>
+								</div>
+							</figure>
+
+							<!-- Testimonial-3 ==== -->
+							<figure class="swiper-slide">
+								<div class="quote">
+									"It is my immense pleasure to recommend Johan Tandukar. I have known Johan from the very first year at Islington College. From the beginning of his journey at Islington college, he had been hardworking and gave full commitment to his studies. During that time, I have watched Johan grow into an outstanding individual who excels in his academic and personal pursuits. He is a well-disciplined and punctual student who ensured to maintain the quality of assignments by carrying out the required essential research. Adding to that, he is a humble student who had always been eager to learn to his fullest. I am confident that
+he will be able to achieve remarkable grades in the future and also succeed in his professional life with his positive attitude towards work."
+								</div>
+
+								<div class="person">
+									<div class="profile-pic">
+										<img src="assets/images/testimonial-3.jpg" alt="Hrishav Tandukar" />
+									</div>
+
+									<div class="person-details">
+										<span class="name">Hrishav Tandukar</span>
+										<span class="post">Project Supervisor & Lecturer at Islington College | AWS Educate Cloud Ambassador </span>
+									</div>
+								</div>
+							</figure>
+
+							<!-- Testimonial-4 ==== -->
+							<figure class="swiper-slide">
+								<div class="quote">
+									"Johan was my student from his second year at Islington College. I got to know him from his good attitude, behavior, dedication, and very friendly nature. He was also under my supervision for Final Year Project (FYP) where he had to develop an application in order to solve social problems. I was consistently impressed by his essential research,  skills, his dedication, and good management skills to complete the project within the deadline. He gives his all efforts to achieve his goal, very focused on his career and talented young boy, and it was indeed a delight to supervise and direct him in the right direction. I would always recommend Johan to anyone in need of a new job."
+								</div>
+
+								<div class="person">
+									<div class="profile-pic">
+										<img src="assets/images/testimonial-4.jpg" alt="Yunisha Bajracharya" />
+									</div>
+
+									<div class="person-details">
+										<span class="name">Yunisha Bajracharya</span>
+										<span class="post">Final Year Project (FYP) Supervisor & Lecturer at Islington College </span>
+									</div>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</section>
+			<hr/>
+			
+		<!-- FOOTER SECTION ========================================= -->
+		<footer class="footer section" id="footer">
+			<div class="container footer-container grid">
+				<div class="footer-logo">
+					<a href="#home" class="logo">
+						<svg width="109" height="39" viewBox="0 0 109 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.74 12.5C0.953333 12.66 1.28 12.82 1.72 12.98C2.16 13.1267 2.68 13.2 3.28 13.2C3.86667 13.2 4.34 13.1067 4.7 12.92C5.07333 12.72 5.35333 12.4267 5.54 12.04C5.74 11.64 5.87333 11.1333 5.94 10.52C6.02 9.90667 6.06 9.18 6.06 8.34V0.799999H8.32V8.02C8.32 9.07333 8.26 10.04 8.14 10.92C8.03333 11.8 7.81333 12.5667 7.48 13.22C7.14667 13.86 6.64667 14.3533 5.98 14.7C5.32667 15.0467 4.44667 15.22 3.34 15.22C2.68667 15.22 2.10667 15.1467 1.6 15C1.09333 14.8533 0.626667 14.6333 0.2 14.34L0.74 12.5ZM17.2656 15.1C16.239 15.1 15.3123 14.9 14.4856 14.5C13.659 14.1 12.9456 13.56 12.3456 12.88C11.7456 12.1867 11.279 11.4133 10.9456 10.56C10.6256 9.69333 10.4656 8.80667 10.4656 7.9C10.4656 6.95333 10.639 6.05333 10.9856 5.2C11.3323 4.33333 11.8123 3.56667 12.4256 2.9C13.039 2.22 13.759 1.68667 14.5856 1.3C15.4256 0.899999 16.3323 0.699999 17.3056 0.699999C18.319 0.699999 19.239 0.906666 20.0656 1.32C20.9056 1.73333 21.619 2.28667 22.2056 2.98C22.8056 3.67333 23.2656 4.44667 23.5856 5.3C23.919 6.15333 24.0856 7.02667 24.0856 7.92C24.0856 8.86667 23.9123 9.77333 23.5656 10.64C23.2323 11.4933 22.759 12.26 22.1456 12.94C21.5323 13.6067 20.8056 14.1333 19.9656 14.52C19.139 14.9067 18.239 15.1 17.2656 15.1ZM12.7456 7.9C12.7456 8.56667 12.8523 9.21333 13.0656 9.84C13.279 10.4667 13.579 11.0267 13.9656 11.52C14.3656 12 14.8456 12.38 15.4056 12.66C15.9656 12.94 16.5923 13.08 17.2856 13.08C18.0056 13.08 18.6456 12.9333 19.2056 12.64C19.7656 12.3467 20.2323 11.9533 20.6056 11.46C20.9923 10.9533 21.2856 10.3933 21.4856 9.78C21.6856 9.15333 21.7856 8.52667 21.7856 7.9C21.7856 7.23333 21.679 6.59333 21.4656 5.98C21.2656 5.35333 20.9656 4.8 20.5656 4.32C20.1656 3.82667 19.6856 3.44 19.1256 3.16C18.579 2.88 17.9656 2.74 17.2856 2.74C16.5656 2.74 15.9256 2.88667 15.3656 3.18C14.8056 3.47333 14.3323 3.86667 13.9456 4.36C13.559 4.85333 13.259 5.40667 13.0456 6.02C12.8456 6.63333 12.7456 7.26 12.7456 7.9ZM38.0647 0.799999V15H35.8047V8.74H28.6447V15H26.4047V0.799999H28.6447V6.74H35.8047V0.799999H38.0647ZM45.368 0.799999H47.488L53.008 15H50.648L49.148 11.14H43.668L42.188 15H39.808L45.368 0.799999ZM48.708 9.48L46.428 3.26L44.068 9.48H48.708ZM57.0041 4.96V15H54.7641V0.799999H56.6041L64.6441 11.06V0.819999H66.9041V15H64.9441L57.0041 4.96ZM12.02 25.78H7.3V38H5.04V25.78H0.3V23.8H12.02V25.78ZM16.6961 23.8H18.8161L24.3361 38H21.9761L20.4761 34.14H14.9961L13.5161 38H11.1361L16.6961 23.8ZM20.0361 32.48L17.7561 26.26L15.3961 32.48H20.0361ZM28.3322 27.96V38H26.0922V23.8H27.9322L35.9722 34.06V23.82H38.2322V38H36.2722L28.3322 27.96ZM41.4242 38V23.8H46.4642C47.9976 23.8 49.2776 24.12 50.3042 24.76C51.3309 25.3867 52.0976 26.24 52.6042 27.32C53.1242 28.3867 53.3842 29.5733 53.3842 30.88C53.3842 32.32 53.0976 33.5733 52.5242 34.64C51.9642 35.7067 51.1642 36.5333 50.1242 37.12C49.0842 37.7067 47.8642 38 46.4642 38H41.4242ZM51.1042 30.88C51.1042 29.88 50.9176 29 50.5442 28.24C50.1842 27.4667 49.6576 26.8667 48.9642 26.44C48.2842 26 47.4509 25.78 46.4642 25.78H43.6642V36.02H46.4642C47.4642 36.02 48.3042 35.7933 48.9842 35.34C49.6776 34.8867 50.2042 34.2733 50.5642 33.5C50.9242 32.7267 51.1042 31.8533 51.1042 30.88ZM61.6606 38.1C60.5273 38.1 59.5673 37.9067 58.7806 37.52C58.0073 37.1333 57.3806 36.6067 56.9006 35.94C56.434 35.2733 56.0873 34.5133 55.8606 33.66C55.6473 32.8067 55.5406 31.92 55.5406 31V23.8H57.7806V31C57.7806 31.6533 57.8473 32.2867 57.9806 32.9C58.114 33.5 58.3273 34.04 58.6206 34.52C58.914 35 59.3073 35.38 59.8006 35.66C60.3073 35.94 60.9273 36.08 61.6606 36.08C62.4073 36.08 63.0273 35.94 63.5206 35.66C64.0273 35.3667 64.4206 34.98 64.7006 34.5C64.994 34.0067 65.2073 33.46 65.3406 32.86C65.474 32.26 65.5406 31.64 65.5406 31V23.8H67.8006V31C67.8006 31.9733 67.6806 32.8933 67.4406 33.76C67.214 34.6133 66.854 35.3667 66.3606 36.02C65.8806 36.66 65.254 37.1667 64.4806 37.54C63.7073 37.9133 62.7673 38.1 61.6606 38.1ZM70.7797 38V23.82H73.0197V31.12L79.6997 23.8H82.1797L76.5797 30.08L82.4997 38H79.9597L75.1597 31.5L73.0197 33.72V38H70.7797ZM88.0828 23.8H90.2028L95.7228 38H93.3628L91.8628 34.14H86.3828L84.9028 38H82.5228L88.0828 23.8ZM91.4228 32.48L89.1428 26.26L86.7828 32.48H91.4228ZM97.4789 38V23.8H103.659C104.299 23.8 104.886 23.9333 105.419 24.2C105.952 24.4667 106.412 24.82 106.799 25.26C107.199 25.7 107.506 26.1933 107.719 26.74C107.946 27.2867 108.059 27.8467 108.059 28.42C108.059 29.0467 107.946 29.6467 107.719 30.22C107.492 30.7933 107.166 31.2867 106.739 31.7C106.326 32.1133 105.839 32.4133 105.279 32.6L108.619 38H106.099L103.019 33.06H99.7189V38H97.4789ZM99.7189 31.08H103.639C104.052 31.08 104.419 30.96 104.739 30.72C105.059 30.48 105.312 30.16 105.499 29.76C105.686 29.3467 105.779 28.9 105.779 28.42C105.779 27.9267 105.672 27.4867 105.459 27.1C105.246 26.7 104.966 26.38 104.619 26.14C104.286 25.9 103.919 25.78 103.519 25.78H99.7189V31.08Z" fill="black" class="logo-name"/>
+						</svg>
+					</a>
+				</div>
+
+				<div class="footer-right">
+					<h2 class="footer-contact-title section-title">
+						Lets's Work<br />Together!
+					</h2>
+
+					<form method="POST" class="contact-form">
+						<div class="split">
+							<input type="text" class="namee" placeholder="Name" required />
+							<input type="email" class="gmail" placeholder="Email" required />
+						</div>
+
+						<textarea
+							class="msg"
+							cols="30"
+							rows="4"
+							placeholder="Your Message"
+							required
+						></textarea>
+						<button type="submit" class="btn submit-btn">Send Message</button>
+					</form>
+				</div>
+
+				<div class="footer-left">
+					<ul class="footer-social-links">
+						<li class="footer-social-link">
+							<a href="https://www.facebook.com/123john456" target="_blank">
+								<span>Facebook</span>
+								<i class="bx bxl-facebook"></i>
+							</a>
+						</li>
+						<li class="footer-social-link">
+							<a href="https://www.linkedin.com/in/johan-tandukar-133520191/" target="_blank">
+								<span>Linkedin</span>
+								<i class="bx bxl-linkedin"></i>
+							</a>
+						</li>
+						<li class="footer-social-link">
+							<a href="https://www.instagram.com/jo_han_tandukar/" target="_blank">
+								<span>Instagram</span>
+								<i class="bx bxl-instagram"></i>
+							</a>
+						</li>
+					</ul>
+
+					<p class="footer-description">
+						Feel free to reach out to me any time. I prefer to talk in person so to schedule the time please directly message me through Gmail, LinkedIn, Instagram, and Facebook.
+					</p>
+
+					<div class="footer-email">
+						<a href="mailto:johantandukar10@gmail.com">
+							johantandukar10@gmail.com
+						</a>
+					</div>
+
+					<div class="copyright">
+						&copy; 2022 by
+						<a
+							href="#"
+							target="_blank">Johan Tandukar</a
+						>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+		<!-- SCROLL BACK UP ================================= -->
+		<a href="#" class="scrollup" id="scroll-up">
+			<i class='bx bxs-up-arrow-alt scrollup-icon'></i>
+		</a>
+
+		<script src=
+		"https://smtpjs.com/v3/smtp.js">
+		</script>
+
+		<script>
+			const form = document.querySelector(".contact-form");
+			form.addEventListener("submit", e => {
+				e.preventDefault();
+				let name = document.querySelector(".namee").value;
+				let email = document.querySelector(".gmail").value;
+				let message = document.querySelector(".msg").value;
+				document.querySelector(".contact-form").reset();
+
+				sendEmail(name, email, message);
+			})
+
+			function sendEmail(name, email, message) {
+				Email.send({
+					
+				Host: "smtp.elasticemail.com", 
+				Username: "demoforapplication321@gmail.com",
+				Password: "D2BE1D3E112913EDDAA5AFECC17BDFD077EE",
+				To: "johantandukar10@gmail.com",
+				From: "demoforapplication321@gmail.com",
+				Subject: `${name} Just messaged you from the website form`,
+				Body: `Name: ${name} <br> Email: ${email} <br> Message: ${message} <br>`,
+				}).then((success) => {
+				
+				alert("message sent successfully. Please check the spam folder in your mail.");
+				}).catch((error) => {
+					
+				alert("error sending message");
+				})
+			}
+		</script>
+
+		<!-- MAIN JS ======================================== -->
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
